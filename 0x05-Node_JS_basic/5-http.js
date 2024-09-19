@@ -20,8 +20,8 @@ function countStudents(path, stream) {
     stream.write(`Number of students: ${result.length}\n`);
     const temp = [];
     Object.keys(final).forEach((data) => temp.push(`Number of students in ${data}: ${final[data]}. List: ${lines.filter((n) => n[1] === data).map((n) => n[0]).join(', ')}\n`));
-    
-    for (let i = 0; i < temp.length; i++) {
+
+    for (let i = 0; i < temp.length; i += 1) {
       if (i === temp.length - 1) {
         temp[i] = temp[i].replace(/(\r\n|\n|\r)/gm, '');
       }
